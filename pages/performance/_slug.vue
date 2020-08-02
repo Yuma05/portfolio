@@ -1,0 +1,11 @@
+<template>
+  <h1>Post Page</h1>
+</template>
+
+<script>
+export default {
+  name: '_slug',
+}
+</script>
+
+<style scoped></style>
