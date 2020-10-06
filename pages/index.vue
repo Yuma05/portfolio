@@ -58,16 +58,20 @@
           </span>
         </v-col>
         <v-col cols="12" md="6">
-          <v-text-field v-model="name" label="お名前" required />
+          <v-text-field v-model="form.name" label="お名前" required />
         </v-col>
         <v-col cols="12" md="6">
-          <v-text-field v-model="email" label="メールアドレス" required />
+          <v-text-field v-model="form.email" label="メールアドレス" required />
         </v-col>
         <v-col cols="12">
-          <v-textarea v-model="message" label="お問い合わせ内容" required />
+          <v-textarea
+            v-model="form.message"
+            label="お問い合わせ内容"
+            required
+          />
         </v-col>
         <v-text-field
-          v-model="botfield"
+          v-model="form.botfield"
           label="人間は入力しないでください"
           v-show="false"
         />
@@ -127,10 +131,10 @@ export default {
     async submit() {
       const params = new FormData()
       params.append('form-name', 'contact')
-      params.append('name', this.name)
-      params.append('email', this.email)
-      params.append('message', this.message)
-      params.append('bot-field', this.botfield)
+      params.append('name', this.form.name)
+      params.append('email', this.form.email)
+      params.append('message', this.form.message)
+      params.append('bot-field', this.form.botfield)
       const response = await this.$axios.$post(window.location.origin, params)
       console.log(response)
     },
