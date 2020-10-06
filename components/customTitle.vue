@@ -2,7 +2,9 @@
   <v-col cols="12">
     <v-row no-gutters justify="center">
       <v-col cols="12" class="text-center">
-        <div class="text-uppercase font-weight-bold text-h4 mb-1 mt-10">
+        <div
+          class="text-uppercase font-weight-bold text-h5 text-sm-h4 mb-1 mt-10"
+        >
           {{ title }}
         </div>
       </v-col>
