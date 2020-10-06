@@ -140,9 +140,10 @@ export default {
     },
     async submitForm() {
       const params = this.setParams()
-      await axios.post('/', params).catch((error) => {
+      const res = await axios.post('/', params).catch((error) => {
         console.log(error.response)
       })
+      console.log(res)
     },
     setParams() {
       const params = new URLSearchParams()
@@ -153,6 +154,7 @@ export default {
       if (this.form.botfield) {
         params.append('bot-field', this.form.botfield)
       }
+      console.log(params)
       return params
     },
   },
