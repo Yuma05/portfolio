@@ -75,7 +75,7 @@
           label="人間は入力しないでください"
           v-show="false"
         />
-        <v-btn color="primary" outlined class="py-5" @click="submit">
+        <v-btn color="primary" outlined class="py-5" @click="submitForm">
           送信
           <v-icon small class="ml-2">mdi-send</v-icon>
         </v-btn>
@@ -137,6 +137,23 @@ export default {
       params.append('bot-field', this.form.botfield)
       const response = await this.$axios.$post(window.location.origin, params)
       console.log(response)
+    },
+    async submitForm() {
+      const params = this.setParams()
+      await axios.post('/', params).catch((error) => {
+        console.log(error.response)
+      })
+    },
+    setParams() {
+      const params = new URLSearchParams()
+      params.append('form-name', 'contact')
+      params.append('name', this.form.name)
+      params.append('email', this.form.email)
+      params.append('message', this.form.message)
+      if (this.form.botfield) {
+        params.append('bot-field', this.form.botfield)
+      }
+      return params
     },
   },
 }
