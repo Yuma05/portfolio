@@ -11,7 +11,9 @@
         <v-col cols="auto"
           ><span style="color: #4deb76;">■</span>勉強中・・・</v-col
         >
-        <v-col cols="12" class="text-center grey--text text--darken-1 pt-0"
+        <v-col
+          cols="12"
+          class="text-center grey--text text--darken-1 text-subtitle-2 text-sm-subtitle-1 font-weight-regular pt-0"
           >経験年数が長いほどバブルが大きくなっています．</v-col
         >
       </v-row>

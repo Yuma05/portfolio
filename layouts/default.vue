@@ -10,25 +10,18 @@
               >ABOUT ME
             </v-list-item-title>
           </v-list-item>
-          <v-list-item to="/#performance">
+          <v-list-item to="/#works">
             <v-list-item-title
               class="blue--text text--darken-4"
               @click="drawer = !drawer"
-              >PERFORMANCE
-            </v-list-item-title>
-          </v-list-item>
-          <v-list-item to="/#production">
-            <v-list-item-title
-              class="blue--text text--darken-4"
-              @click="drawer = !drawer"
-              >PRODUCTION
+              >WORKS
             </v-list-item-title>
           </v-list-item>
           <v-list-item to="/#contact">
             <v-list-item-title
               class="blue--text text--darken-4"
               @click="drawer = !drawer"
-              >CONTACT ME
+              >CONTACT
             </v-list-item-title>
           </v-list-item>
         </v-list>
@@ -45,11 +38,8 @@
         <v-spacer></v-spacer>
         <div class="hidden-sm-and-down">
           <v-btn text color="blue darken-4" to="/#about">ABOUT ME</v-btn>
-          <v-btn text color="blue darken-4" to="/#performance"
-            >PERFORMANCE</v-btn
-          >
-          <v-btn text color="blue darken-4" to="/#production">PRODUCTION</v-btn>
-          <v-btn text color="blue darken-4" to="/#contact">CONTACT ME</v-btn>
+          <v-btn text color="blue darken-4" to="/#works">WORKS</v-btn>
+          <v-btn text color="blue darken-4" to="/#contact">CONTACT</v-btn>
         </div>
       </v-app-bar>
       <nuxt />
