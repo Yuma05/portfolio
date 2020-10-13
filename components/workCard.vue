@@ -20,7 +20,7 @@
           </v-expand-transition>
         </v-img>
         <v-card-text>
-          <p class="text-h5 text--primary ma-0">
+          <p class="text-h6 text-sm-h5 font-weight-regular text--primary ma-0">
             {{ title }}
           </p>
           <div class="blue--text text--darken-4">
@@ -70,8 +70,24 @@
               </v-col>
             </v-row>
           </v-col>
-          <v-col cols="12" class="grey--text text--darken-3 text-center"
+          <v-col
+            cols="12"
+            class="grey--text text--darken-3 text-center text-subtitle-2 text-sm-subtitle-1 font-weight-regular"
             ><span v-html="makeReturnPoint(discription)" />
+          </v-col>
+          <v-col cols="12" class="text-center pt-0">
+            <v-btn
+              v-for="link in links"
+              :key="link"
+              color="primary"
+              outlined
+              class="py-2"
+              style="text-transform: none;"
+              :href="link.url"
+              target="_blank"
+            >
+              {{ link.title }}
+            </v-btn>
           </v-col>
           <v-col cols="12" class="pt-0">
             <v-btn
@@ -116,6 +132,10 @@ export default {
       type: String,
       require: true,
     },
+    links: {
+      type: Array,
+      require: true,
+    },
     imgs: {
       type: Array,
       require: true,
@@ -142,9 +162,7 @@ export default {
   position: absolute;
   width: 100%;
 }
-span {
-  ::v-deep .return-point {
-    display: inline-block;
-  }
+::v-deep .return-point {
+  display: inline-block;
 }
 </style>

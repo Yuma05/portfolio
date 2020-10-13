@@ -42,7 +42,7 @@ export default {
         { title: 'AWS', yearLevel: 1, experienceLevel: 1 },
         { title: 'Firebase', yearLevel: 1, experienceLevel: 2 },
         { title: 'Nuxt.js', yearLevel: 2, experienceLevel: 2 },
-        { title: 'Vue.js', yearLevel: 2, experienceLevel: 2 },
+        { title: 'Vue.js', yearLevel: 2, experienceLevel: 1 },
       ],
     }
   },
