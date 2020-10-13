@@ -23,18 +23,57 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    titleTemplate: '%s - ' + process.env.npm_package_name,
-    title: process.env.npm_package_name || '',
+    title: "Yuma's Portfolio",
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
+        name: 'keywords',
+        content: 'portfolio,nuxt.js,web,サイト,アプリ',
+      },
+      {
+        name: 'msapplication-TileColor',
+        content: '#ffffff',
+      },
+      {
+        name: 'theme-color',
+        content: '#ffffff',
+      },
+      {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || '',
+        content:
+          '千葉県出身の学生です。情報工学を学んでいます。主にWebページ・アプリケーションの開発をしています。',
       },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      {
+        rel: 'apple-touch-icon',
+        sizes: '180x180',
+        href: '/apple-touch-icon.png',
+      },
+      {
+        rel: 'icon',
+        sizes: '32x32',
+        type: 'image/png',
+        href: '/favicon-32x32.png',
+      },
+      {
+        rel: 'icon',
+        sizes: '16x16',
+        type: 'image/png',
+        href: '/favicon-16x16.png',
+      },
+      {
+        rel: 'manifest',
+        href: '/site.webmanifest',
+      },
+      {
+        rel: 'mask-icon',
+        href: '/safari-pinned-tab.svg',
+        color: '#5bbad5',
+      },
+    ],
   },
   /*
    ** Global CSS
