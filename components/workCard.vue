@@ -29,7 +29,13 @@
           <v-container fluid class="pa-0 mt-2">
             <v-row no-gutters>
               <v-col v-for="tag in tags" :key="tag" cols="auto" class="mr-1">
-                <v-btn depressed x-small color="blue" class="white--text">
+                <v-btn
+                  depressed
+                  x-small
+                  color="blue"
+                  class="white--text"
+                  style="text-transform: none;"
+                >
                   {{ tag }}
                 </v-btn>
               </v-col>
@@ -75,7 +81,7 @@
             class="grey--text text--darken-3 text-center text-subtitle-2 text-sm-subtitle-1 font-weight-regular"
             ><span v-html="makeReturnPoint(discription)" />
           </v-col>
-          <v-col cols="12" class="text-center pt-0">
+          <v-col v-if="links.length !== 0" cols="12" class="text-center pt-0">
             <v-btn
               v-for="link in links"
               :key="link"
@@ -89,7 +95,7 @@
               {{ link.title }}
             </v-btn>
           </v-col>
-          <v-col cols="12" class="pt-0">
+          <v-col cols="12" class="pt-0 text-center">
             <v-btn
               v-for="tag in tags"
               :key="tag"
@@ -97,6 +103,7 @@
               x-small
               color="blue"
               class="white--text mr-1"
+              style="text-transform: none;"
             >
               {{ tag }}
             </v-btn>
