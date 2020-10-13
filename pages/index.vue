@@ -27,6 +27,7 @@
             :title="content.title"
             :subtitle="content.subtitle"
             :discription="content.discription"
+            :links="content.links"
             :imgs="content.imgs.map((obj) => obj.img.url)"
             :tags="content.tag.split(' ')"
           ></work-card>
@@ -40,10 +41,10 @@
             class="text-center text-subtitle-2 text-sm-subtitle-1 font-weight-regular"
           >
             最後までご覧いただきありがとうございます。
-            <span style="display: inline-block;">
+            <span class="return-point">
               ご興味がございましたら下記フォームから
             </span>
-            <span style="display: inline-block;">
+            <span class="return-point">
               お問い合わせください。
             </span>
           </v-col>
@@ -220,9 +221,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-span {
-  ::v-deep .return-point {
-    display: inline-block;
-  }
+::v-deep .return-point {
+  display: inline-block;
 }
 </style>
