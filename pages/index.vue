@@ -19,10 +19,8 @@
         class="mt-n16 pt-16"
       ></custom-title>
       <v-row justify="center">
-        <v-col cols="12" md="4">
+        <v-col v-for="content in works" :key="content" cols="12" md="4">
           <work-card
-            v-for="content in works"
-            :key="content"
             :thumbnail="content.thumbnail.url"
             :title="content.title"
             :subtitle="content.subtitle"
