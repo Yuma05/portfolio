@@ -57,14 +57,21 @@
         >
           <v-icon>mdi-close</v-icon>
         </v-btn>
-        <v-row justify="center" class="py-5">
-          <v-col
-            cols="12"
-            class="text-center grey--text text--darken-4 headline pb-0"
-            >{{ title }}
+        <v-row justify="center">
+          <v-col cols="12">
+            <v-col
+              cols="12"
+              class="text-center grey--text text--darken-4 headline pb-0"
+              >{{ title }}
+            </v-col>
+            <v-row justify="center" no-gutters>
+              <v-col cols="12" style="max-width: 20px;" class="primary">
+                <v-divider style="border-width: 3px 0 0 0;"></v-divider>
+              </v-col>
+            </v-row>
           </v-col>
-          <v-col cols="12" class="grey--text text--darken-3"
-            >{{ discription }}
+          <v-col cols="12" class="grey--text text--darken-3 text-center"
+            ><span v-html="makeReturnPoint(discription)" />
           </v-col>
           <v-col cols="12" class="pt-0">
             <v-btn
@@ -78,11 +85,6 @@
               {{ tag }}
             </v-btn>
           </v-col>
-          <!--          <v-col v-for="tag in tags" :key="tag" cols="auto" class="mr-1">-->
-          <!--            <v-btn depressed x-small color="blue" class="white&#45;&#45;text">-->
-          <!--              {{ tag }}-->
-          <!--            </v-btn>-->
-          <!--          </v-col>-->
           <v-col cols="12">
             <slide-img :imgs="imgs"></slide-img>
           </v-col>
@@ -131,7 +133,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .v-card--reveal {
   align-items: center;
   bottom: 0;
@@ -139,5 +141,10 @@ export default {
   opacity: 0.5;
   position: absolute;
   width: 100%;
+}
+span {
+  ::v-deep .return-point {
+    display: inline-block;
+  }
 }
 </style>

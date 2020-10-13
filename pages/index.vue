@@ -1,14 +1,15 @@
 <template>
   <v-container fluid>
     <v-container>
+      <div class="mt-10"></div>
       <custom-title
         id="about"
         title="about me"
         class="mt-n16 pt-16"
       ></custom-title>
       <v-card elevation="5" max-width="700px" class="mx-auto ma-5">
-        <v-card-text>
-          {{ about.comment }}
+        <v-card-text class="text-center grey--text text--darken-4">
+          <span v-html="makeReturnPoint(about.comment)" />
         </v-card-text>
       </v-card>
       <skill-visual></skill-visual>
@@ -217,3 +218,11 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+span {
+  ::v-deep .return-point {
+    display: inline-block;
+  }
+}
+</style>

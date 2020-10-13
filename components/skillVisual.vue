@@ -29,8 +29,8 @@ export default {
   data() {
     return {
       width: 0,
-      height: 400,
-      sizeRange: [50, 80],
+      height: 450,
+      sizeRange: [40, 60],
       data: [
         { title: 'Python', yearLevel: 2, experienceLevel: 1 },
         { title: 'Javascript', yearLevel: 2, experienceLevel: 2 },
@@ -41,6 +41,8 @@ export default {
         { title: 'Flutter', yearLevel: 0, experienceLevel: 0 },
         { title: 'AWS', yearLevel: 1, experienceLevel: 1 },
         { title: 'Firebase', yearLevel: 1, experienceLevel: 2 },
+        { title: 'Nuxt.js', yearLevel: 2, experienceLevel: 2 },
+        { title: 'Vue.js', yearLevel: 2, experienceLevel: 2 },
       ],
     }
   },
@@ -62,7 +64,7 @@ export default {
       const xRandom = this.width * Math.random()
       const yRandom = this.height * Math.random()
       const nodesData = []
-      const radiusScale = d3.scaleLinear().domain([0, 2]).range([45, 70])
+      const radiusScale = d3.scaleLinear().domain([0, 2]).range(this.sizeRange)
       const colorScale = d3
         .scaleOrdinal()
         .domain([0, 2])
