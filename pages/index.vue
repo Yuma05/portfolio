@@ -139,10 +139,10 @@
 
 <script>
 import axios from 'axios'
-import customTitle from '@/components/customTitle'
-import skillVisual from '@/components/skillVisual'
-import workCard from '~/components/workCard'
-import ConfirmTitle from '@/components/confirmTitle'
+import customTitle from '@/components/CustomTitle'
+import skillVisual from '@/components/SkillVisual'
+import workCard from '@/components/WorkCard'
+import ConfirmTitle from '@/components/ConfirmTitle'
 
 const myRequest = axios.create({
   headers: { 'X-API-KEY': process.env.API_KEY },

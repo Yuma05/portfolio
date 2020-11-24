@@ -118,7 +118,7 @@
 </template>
 
 <script>
-import SlideImg from '@/components/slideImg'
+import SlideImg from '@/components/SlideImg'
 
 export default {
   components: { SlideImg },
