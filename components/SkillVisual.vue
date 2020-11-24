@@ -40,8 +40,9 @@ export default {
         { title: 'Typescript', yearLevel: 0, experienceLevel: 0 },
         { title: 'Flutter', yearLevel: 0, experienceLevel: 0 },
         { title: 'AWS', yearLevel: 1, experienceLevel: 1 },
-        { title: 'Firebase', yearLevel: 1, experienceLevel: 2 },
+        { title: 'Firebase', yearLevel: 1, experienceLevel: 1 },
         { title: 'Nuxt.js', yearLevel: 2, experienceLevel: 2 },
+        { title: 'Django', yearLevel: 1, experienceLevel: 1 },
         { title: 'Vue.js', yearLevel: 2, experienceLevel: 1 },
       ],
     }
