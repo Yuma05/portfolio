@@ -87,7 +87,7 @@
               :key="link"
               color="primary"
               outlined
-              class="py-2"
+              class="py-2 mr-2"
               style="text-transform: none;"
               :href="link.url"
               target="_blank"
